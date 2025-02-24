@@ -61,7 +61,7 @@ exports.deleteTask = async (req, res) => {
     }
 };
 
-// Массовое обновление задач
+
 exports.bulkUpdateTasks = async (req, res) => {
     try {
         const { ids, updates } = req.body;
@@ -76,7 +76,7 @@ exports.bulkUpdateTasks = async (req, res) => {
     }
 };
 
-// Массовое удаление задач
+
 exports.bulkDeleteTasks = async (req, res) => {
     try {
         const { ids } = req.body;
@@ -90,7 +90,7 @@ exports.bulkDeleteTasks = async (req, res) => {
     }
 };
 
-// Статистика задач
+
 exports.getTaskStats = async (req, res) => {
     try {
         const stats = await Task.aggregate([
